@@ -3,21 +3,32 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var DataSchema = new Schema ({
-    temperature: {
-        type : Number,
-        require : true,
-    },
-    speed_of_wind: {
-        type : Number,
-        require : true,
-    },
-    location: {
+    humidity: {
         type : String,
         require : true,
     },
-    climate: {
+    temperature_celcius:{
         type : String,
-        enum: ['Soleado', 'Lluvioso', 'Nublado', 'Vientos fuertes'],
+        require : true,
+    },
+    temperature_fharenheit:{
+        type : String,
+        require : true,
+    },
+    heat_index_celcius: {
+        type : String,
+        require : true,
+    },
+    heat_index_fharenheit: {
+        type : String,
+        require : true,
+    },
+    soil_humidity: {
+        type : String,        
+        require : true,
+    },
+    luminosity: {
+        type : String,        
         require : true,
     },
 });

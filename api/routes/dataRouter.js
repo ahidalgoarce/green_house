@@ -5,7 +5,7 @@ const DataController = require('../controllers/dataController');
 
 router.all('/', DataController.getAllData);
 
-router.post('/', DataController.createNewData);
+router.post('/new', DataController.createNewData);
 
 router.get('/:id', DataController.findDataById);
 
